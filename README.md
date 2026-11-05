@@ -4,7 +4,8 @@
 
 Signed builds of Black Mamba TV, the family media app, for Fire TV / Android TV and for
 Android phones and tablets. Both versions have Tailscale built in, so they reach the home
-media server from anywhere. They also set the server up by themselves and put Anime first.
+media server from anywhere. They also set the server up by themselves and put Anime first. The
+phone app can also request movies and series through Seerr.
 
 - **The TV app** is a private build of [Wholphin](https://github.com/damontecres/Wholphin).
 - **The phone app** is a private build of
@@ -13,6 +14,39 @@ media server from anywhere. They also set the server up by themselves and put An
 Each release contains both apps under one version number, and installed copies update
 themselves from this repository. The source is kept in separate private repositories, and
 every release includes the matching source archives.
+
+## Which file do I need?
+
+Every file is in the [latest release](https://github.com/DevJonasPereira/black-mamba-tv-releases/releases/latest).
+
+| Device | App | File to install | Needs at least |
+|---|---|---|---|
+| Amazon Fire TV: every Stick (Lite, HD, 4K, 4K Max), Cube, and TVs with Fire TV built in | TV | `BlackMamba-release-armeabi-v7a.apk` | Fire OS 6 |
+| Google TV / Android TV: Chromecast with Google TV, Onn, Nvidia Shield, Sony, TCL, Hisense, Philips | TV | `BlackMamba-release-armeabi-v7a.apk` | Android 6 |
+| A TV you're not sure about | TV | `BlackMamba-release.apk` (works on every TV, bigger download) | Android 6 |
+| Android phone: Samsung Galaxy, Google Pixel, Motorola, Xiaomi, OnePlus and so on, from about 2017 on | Phone | `BlackMambaTV-Mobile-release-arm64-v8a.apk` | Android 10 |
+| Older or cheaper Android phone that's 32-bit only | Phone | `BlackMambaTV-Mobile-release-armeabi-v7a.apk` | Android 10 |
+| Android tablet, including Amazon Fire tablets on Fire OS 8 | Phone | `BlackMambaTV-Mobile-release-arm64-v8a.apk` | Android 10 |
+| A phone or tablet you're not sure about | Phone | `BlackMambaTV-Mobile-release.apk` (works on every phone, bigger download) | Android 10 |
+| iPhone, iPad, Apple TV, Roku, Samsung or LG smart-TV apps | Not supported | | |
+
+If a file won't install ("App not installed" or "There was a problem parsing the package"),
+use the one that works everywhere for that device: `BlackMamba-release.apk` on TVs, or
+`BlackMambaTV-Mobile-release.apk` on phones. Updates later pick the right build for the device
+automatically.
+
+### What each device needs to connect
+
+- **Permission to install apps from outside the app store:** the Downloader app on a Fire
+  TV, or your browser on a phone. Black Mamba TV asks for the same permission once, the first
+  time it installs an update.
+- **At home on the home Wi-Fi:** nothing else. It connects to the server directly.
+- **Anywhere else, including mobile data and other people's Wi-Fi:** a one-time Tailscale
+  sign-in. The TV shows a QR code to scan with a phone, and the phone app has a **Sign in to
+  Tailscale** button. Use a Tailscale account that has been given access to the media server.
+- **A Jellyfin user:** pick it or sign in after the connection is made.
+- **To request movies and series:** this is in the phone app's **Discover** tab. Sign in
+  once with the same Jellyfin username and password.
 
 ## Install on a Fire TV
 
@@ -24,10 +58,11 @@ every release includes the matching source archives.
 3. Open Downloader and enter this address:
 
    ```
-   https://github.com/DevJonasPereira/black-mamba-tv-releases/releases/latest/download/BlackMamba-release.apk
+   https://github.com/DevJonasPereira/black-mamba-tv-releases/releases/latest/download/BlackMamba-release-armeabi-v7a.apk
    ```
 
-   Then choose **Install**.
+   Then choose **Install**. If it won't install, use the same address ending in
+   `BlackMamba-release.apk` instead.
 4. Open **Black Mamba TV**. If it can't reach the server directly, it shows a QR code. Scan the
    code with a phone and sign in to Tailscale. This only needs doing once.
 5. Pick your Jellyfin user and sign in.
@@ -41,14 +76,18 @@ Needs Android 10 or newer.
 1. On the phone, open this link in the browser:
 
    ```
-   https://github.com/DevJonasPereira/black-mamba-tv-releases/releases/latest/download/BlackMambaTV-Mobile-release.apk
+   https://github.com/DevJonasPereira/black-mamba-tv-releases/releases/latest/download/BlackMambaTV-Mobile-release-arm64-v8a.apk
    ```
 
+   That's the right file for almost every phone. On an older 32-bit phone, use the address
+   ending in `BlackMambaTV-Mobile-release-armeabi-v7a.apk` instead.
 2. Open the downloaded file. If Android asks, allow your browser to install unknown apps, then
    choose **Install**.
 3. Open **Black Mamba TV** and tap **Sign in to Tailscale** if it asks. This only needs doing
    once.
 4. Pick your Jellyfin user and sign in.
+5. To request movies and series, open the **Discover** tab and sign in once with the same
+   Jellyfin username and password.
 
 ## Updates
 
