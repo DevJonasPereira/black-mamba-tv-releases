@@ -6,7 +6,8 @@ Signed builds of Black Mamba TV, the family media app, for Fire TV / Android TV 
 Android phones and tablets. Both versions have Tailscale built in, so they reach the home
 media server from anywhere. They also set the server up by themselves, put Anime first, and
 have a **Calendar** of upcoming episodes. The phone app can also request movies and series
-through Seerr.
+through Seerr. Both apps are made for the Black Mamba home server only, so there's no server
+to choose. Several Jellyfin users can share one device, which is handy on a family tablet.
 
 - **The TV app** is a private build of [Wholphin](https://github.com/damontecres/Wholphin).
 - **The phone app** is a private build of
