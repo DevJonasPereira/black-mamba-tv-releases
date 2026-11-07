@@ -5,8 +5,8 @@
 Signed builds of Black Mamba TV, the family media app, for Fire TV / Android TV and for
 Android phones and tablets. Both versions have Tailscale built in, so they reach the home
 media server from anywhere. They also set the server up by themselves, put Anime first, and
-have a **Calendar** of upcoming episodes. The phone app can also request movies and series
-through Seerr. Both apps are made for the Black Mamba home server only, so there's no server
+have a **Calendar** of upcoming episodes. Both apps can request movies and series through
+Seerr, using the same sign-in as for watching. Both apps are made for the Black Mamba home server only, so there's no server
 to choose. Several Jellyfin users can share one device, which is handy on a family tablet.
 
 - **The TV app** is a private build of [Wholphin](https://github.com/damontecres/Wholphin).
@@ -46,9 +46,13 @@ automatically.
 - **Anywhere else, including mobile data and other people's Wi-Fi:** a one-time Tailscale
   sign-in. The TV shows a QR code to scan with a phone, and the phone app has a **Sign in to
   Tailscale** button. Use a Tailscale account that has been given access to the media server.
-- **A Jellyfin user:** pick it or sign in after the connection is made.
-- **To request movies and series:** this is in the phone app's **Discover** tab. Sign in
-  once with the same Jellyfin username and password.
+  If the device needs approval, or the account is on a different Tailscale network, the app
+  says so and carries on by itself once it's sorted.
+- **One sign-in:** once connected, the app shows a single username and password sheet. It
+  signs you in to watching (Jellyfin) and to requests (Seerr) together.
+- **To request movies and series:** open **Discover** (the TV's side menu or the phone's
+  tab). If you were signed in before this version, Discover asks once for the same username
+  and password.
 - **To see upcoming episodes:** nothing extra. Open **Calendar** in the TV app's side menu or
   the phone app's Calendar tab. It lists new episodes of the series the server follows.
 
@@ -69,7 +73,7 @@ automatically.
    `BlackMamba-release.apk` instead.
 4. Open **Black Mamba TV**. If it can't reach the server directly, it shows a QR code. Scan the
    code with a phone and sign in to Tailscale. This only needs doing once.
-5. Pick your Jellyfin user and sign in.
+5. Sign in with your username and password. That covers watching and requests.
 
 On other Android TVs, sideload the same APK the way you normally would.
 
@@ -89,9 +93,8 @@ Needs Android 10 or newer.
    choose **Install**.
 3. Open **Black Mamba TV** and tap **Sign in to Tailscale** if it asks. This only needs doing
    once.
-4. Pick your Jellyfin user and sign in.
-5. To request movies and series, open the **Discover** tab and sign in once with the same
-   Jellyfin username and password.
+4. Sign in with your username and password. That covers watching and requests (the
+   **Discover** tab).
 
 ## Updates
 
