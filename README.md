@@ -51,11 +51,15 @@ automatically.
 - **One sign-in:** once connected, the app shows a single username and password sheet. It
   signs you in to watching (Jellyfin) and to requests (Seerr) together.
 - **To request movies and series:** open **Discover** (the TV's side menu or the phone's
-  tab). If you were signed in before this version, Discover asks once for the same username
-  and password.
-- **To approve requests (admins, phone app):** Discover starts with **Waiting for your
-  approval**. Tap a title to approve or decline it, or tap **Manage requests** for the full list,
-  where you can also retry or delete requests.
+  tab). It uses your normal sign-in, so there's nothing else to sign in to. When something you
+  asked for arrives, the phone sends a notification and the TV shows a message.
+- **To approve requests (admins):** on the phone, Discover starts with **Waiting for your
+  approval**, and **Manage requests** has the full list. On the TV, select a request under
+  Discover → Requests. Admins also get Discover → **Server** on the phone: server health,
+  downloads, and new devices to approve.
+- **Leaving soon:** Home shows what will be deleted soon because nobody has watched it. On
+  the phone, tap one and choose **Keep it**.
+- **Downloads for travel (phone):** the download button offers a smaller 720p copy.
 - **To see upcoming episodes:** nothing extra. Open **Calendar** in the TV app's side menu or
   the phone app's Calendar tab. It lists new episodes of the series the server follows.
 
@@ -76,7 +80,9 @@ automatically.
    `BlackMamba-release.apk` instead.
 4. Open **Black Mamba TV**. If it can't reach the server directly, it shows a QR code. Scan the
    code with a phone and sign in to Tailscale. This only needs doing once.
-5. Sign in with your username and password. That covers watching and requests.
+5. Sign in with your username and password. That covers watching and requests. To skip typing
+   with the remote, choose **Sign in with your phone instead**, then scan the code with a phone
+   that has Black Mamba TV installed and signed in.
 
 On other Android TVs, sideload the same APK the way you normally would.
 
