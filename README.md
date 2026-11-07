@@ -53,6 +53,9 @@ automatically.
 - **To request movies and series:** open **Discover** (the TV's side menu or the phone's
   tab). If you were signed in before this version, Discover asks once for the same username
   and password.
+- **To approve requests (admins, phone app):** Discover starts with **Waiting for your
+  approval**. Tap a title to approve or decline it, or tap **Manage requests** for the full list,
+  where you can also retry or delete requests.
 - **To see upcoming episodes:** nothing extra. Open **Calendar** in the TV app's side menu or
   the phone app's Calendar tab. It lists new episodes of the series the server follows.
 
