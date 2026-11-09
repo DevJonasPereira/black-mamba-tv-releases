@@ -50,9 +50,16 @@ automatically.
   says so and carries on by itself once it's sorted.
 - **One sign-in:** once connected, the app shows a single username and password sheet. It
   signs you in to watching (Jellyfin) and to requests (Seerr) together.
-- **To request movies and series:** open **Discover** (the TV's side menu or the phone's
-  tab). It uses your normal sign-in, so there's nothing else to sign in to. When something you
-  asked for arrives, the phone sends a notification and the TV shows a message.
+- **To find something:** use Search. It shows what you can watch now first, then films and
+  series you can request.
+- **To request movies and series:** search for them, tap a Trending or Upcoming title on Home,
+  or open **Discover** (the TV's side menu or the phone's tab). Titles you can request look like
+  the rest of the library, with a **Request** badge. A series missing seasons has a button on
+  its page to request them. It all uses your normal sign-in, so there's nothing else to sign in
+  to. When something you asked for arrives, the phone sends a notification and the TV shows a
+  message.
+- **To watch a series:** press Play on the series. It starts the earliest episode you haven't
+  watched, and resumes a half-watched one.
 - **To approve requests (admins):** on the phone, Discover starts with **Waiting for your
   approval**, and **Manage requests** has the full list. On the TV, select a request under
   Discover → Requests. Admins also get Discover → **Server** on the phone: server health,
