@@ -59,7 +59,10 @@ automatically.
   to. When something you asked for arrives, the phone sends a notification and the TV shows a
   message.
 - **To watch a series:** press Play on the series. It starts the earliest episode you haven't
-  watched, and resumes a half-watched one.
+  watched, and resumes a half-watched one. On a phone or tablet, an episode that plays right to
+  its end without anyone touching the screen during the credits doesn't start the next one by
+  itself: the player asks **Still watching?** first, so a tablet left playing doesn't mark a
+  whole season as watched.
 - **To approve requests (admins):** on the phone, Discover starts with **Waiting for your
   approval**, and **Manage requests** has the full list. On the TV, select a request under
   Discover → Requests. Admins also get Discover → **Server** on the phone: server health,
